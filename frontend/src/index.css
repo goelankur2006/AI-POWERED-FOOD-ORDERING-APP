@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Poetsen+One&display=swap');
+
+*{
+  font-family: "Nunito", sans-serif;
+}
+.header-text{
+  background-color: rgb(201, 201, 201);
+}
+
+.header-text h1{
+  font-family: "Ancizar", serif;
+}
+
+.logo{
+  font-weight: bold;
+  color: #da801a;
+  font-size: xx-large;
+} 
+
+.logo::first-letter{
+  color: red;
+}
+
+h1{
+  font-size: 5vw !important;
+  margin-top: 5vh !important;
+  text-transform: uppercase ;
+}
+
+h5{
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h2{
+  text-transform: uppercase ;
+  text-align: center;
+}
+
+h2 span{
+  color: red;
+}
+
+ul li::marker{
+  color: #9b0f0f;
+}
+
+.menu-list{
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.menu-list-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+@media(max-width:992px) {
+  .menu-list-item p{
+    font-size: 10px;
+  }
+  .menu-list-item img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.header-img{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.card-img-top{
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.add_white, .remove, .add_green{
+  height: 30px;
+  width: 30px;
+  display: flex;
+}
+
+.counter{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.show_all{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter p{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.cart-icon{
+  font-size: 30px;
+}
+
+.cart-icon:hover{
+  cursor: pointer;
+  color: green;
+}
+
+.cart-counter{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.cart-counter p{
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.price{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.delete-icon, .add-icon{
+  font-size: 25px;
+  margin-left: 15px;
+}
+
+.delete-icon:hover, .add-icon:hover{
+  cursor: pointer;
+}
+
+.cart-img{
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.menu-img-Food:hover{
+  border:5px solid black;
+    width: 120px;
+    height: 120px;
+    transform: scale(1.1);
+    border-radius:50%;
+    padding:2px;
+}
+.menu-img-Food.active {
+    border:5px solid black;
+    width: 120px;
+    height: 120px;
+    transform: scale(1.1);
+    border-radius: 50%;
+    padding:2px;
+}
