@@ -7,7 +7,7 @@ import { LuIndianRupee } from "react-icons/lu";
 
 const Cart = () => {
   const navigate = useNavigate()
-  const{cartItems, food_list, removeFromCart, addToCart, getTotalCartAmount} = useContext(StoreContext)
+  const{cartItems, food_list, removeFromCart, addToCart, getTotalCartAmount,url} = useContext(StoreContext)
   return (
     <div className='container mt-5 cart'>
       <div>
@@ -29,7 +29,7 @@ const Cart = () => {
                 if(cartItems[item._id]>0){
                   return(
                     <tr key={index}>
-                      <td><img src={item.image} alt="" className='cart-img'/></td>
+                      <td><img src={url+"/uploads/"+item.image} alt="" className='cart-img'/></td>
                       <td>{item.name}</td>
                       <td>{item.price}</td>
                       <td>{cartItems[item._id]}</td>

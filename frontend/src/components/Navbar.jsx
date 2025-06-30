@@ -1,9 +1,25 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {NavLink, useNavigate} from "react-router-dom";
 import { GrCart } from "react-icons/gr";
+import { HashLink } from 'react-router-hash-link'
+import { StoreContext } from '../context/StoreContext';
+import { assets } from '../assets/assets';
+import { IoPersonSharp } from "react-icons/io5";
+import { PiPackageLight } from "react-icons/pi";
+import { IoIosLogOut } from "react-icons/io";
 
-const Navbar = () => {
+
+const Navbar = ({setShowLogin}) => {
   const navigate = useNavigate()
+  const {token, setToken} = useContext(StoreContext)
+
+  const logout =() =>{
+    localStorage.removeItem('token');
+    setToken("");
+    navigate('/');
+  }
+
+
   return (
     <div>
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -15,14 +31,36 @@ const Navbar = () => {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                <NavLink className="nav-link active" aria-current="page" to="/">Home</NavLink>
+                <HashLink className="nav-link active" aria-current="page" to="/">Home</HashLink>
+                </li>
+                <li className="nav-item">
+                <HashLink className="nav-link active" aria-current="page" to="#ourMenu">Menu</HashLink>
+                </li>
+                <li className="nav-item">
+                <HashLink className="nav-link active" aria-current="page" to="#chefs">Chef</HashLink>
+                </li>
+                <li className="nav-item">
+                <HashLink className="nav-link active" aria-current="page" to="#gallery">Gallery</HashLink>
+                </li>
+                <li className="nav-item">
+                <HashLink className="nav-link active" aria-current="page" to="#testimonials">Testimonials</HashLink>
                 </li>
             </ul>
             <div className='cart-icon'>
-                <GrCart onClick= {()=>navigate('cart')} className='cart-icon'/>
+                <GrCart onClick= {()=>navigate('cart')} className='cart-icon'/>&nbsp;
             </div>
-
-           
+            {!token ?<div className='btn btn-signin' onClick={() => setShowLogin(true)}>
+              Sign In
+            </div>:
+            <div className='navbar-profile'>
+              <IoPersonSharp alt="" size={28} className='profile-icon' />
+              <ul className="nav-profile-dropdown">
+                <li><PiPackageLight className='dropdown-icons' color="#fa5c1c" alt="" /><p>Orders</p></li>
+                <hr />
+                <li onClick={logout}><IoIosLogOut className='dropdown-icons' color="#fa5c1c" alt=""/><p>Logout</p></li>
+              </ul>
+            </div>}
+            
             </div>
         </div>
         </nav>

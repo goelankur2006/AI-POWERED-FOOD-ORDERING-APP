@@ -3,6 +3,17 @@ import about_img from './about_img.jpg'
 import add_icon_white from './add-icon-white.jpg'
 import add_icon_green from './add-icon-green.jpeg'
 import remove_icon from './remove-icon-red.png'
+import chef1 from './chef1.jpeg'
+import chef2 from './chef2.jpeg'
+import chef3 from './chef3.jpeg'
+import gallery1 from './gallery1.jpeg'
+import gallery2 from './gallery2.jpeg'
+import gallery3 from './gallery3.jpeg'
+import gallery4 from './gallery4.jpeg'
+import gallery5 from './gallery5.jpeg'
+import gallery6 from './gallery6.jpeg'
+import gallery7 from './gallery7.jpeg'
+import gallery8 from './gallery8.jpeg'
 
 import menu_item1 from './menu-item-1.jpg'
 import menu_item2 from './menu-item-2.jpg'
@@ -61,12 +72,25 @@ import Food_item42 from './Food_item42.jpeg'
 import Food_item43 from './Food_item43.jpeg'
 import Food_item44 from './Food_item44.jpeg'
 
+import Testimonial1 from './Testimonial1.jpeg'
+import Testimonial2 from './Testimonial2.jpeg'
+import Testimonial3 from './Testimonial3.jpeg'
+import Testimonial4 from './Testimonial4.jpeg'
+
 export const assets={
     header_img,
     about_img,
     add_icon_white,
     add_icon_green,
     remove_icon,
+    gallery1,
+    gallery2,
+    gallery3,
+    gallery4,
+    gallery5,
+    gallery6,
+    gallery7,
+    gallery8
 }
 
 export const menu_list=[
@@ -470,4 +494,55 @@ export const food_list=[
         price: 450,
         category: "Lasagna"
     }
+]
+
+export const Chef_list=[
+    {
+        _id:"1",
+        name:"Janvi kapoor",
+        image:chef1,
+        position:"Master Chef",
+        description:"With over 20 years of experience, Chef 1 crafts exquisite dishes blending tradition and innovation.",
+    },
+    {
+        _id:"2",
+        name:"Vikas khanna",
+        image:chef2,
+        position:"Sous Chef",
+        description:"He is known for precision and creativity, ensuring every plate is a work of art",
+    },
+    {
+        _id:"3",
+        name:"Neha sharma",
+        image:chef3,
+        position:"Pastry Chef",
+        description:"She delights guests with decadent desserts and a passion for sweet perfection.",
+    },
+]
+
+export const Testimonials_list = [
+    {
+        _id: "1",
+        name: "Priya Sharma",
+        image: Testimonial1,
+        comment: "The food was absolutely delicious and the service was outstanding! Highly recommended."
+    },
+    {
+        _id: "2",
+        name: "Anjali Mehra",
+        image: Testimonial2,
+        comment: "A wonderful dining experience. The ambiance and flavors were perfect for our family dinner."
+    },
+    {
+        _id: "3",
+        name: "Rahul Verma",
+        image: Testimonial3,
+        comment: "Great taste, generous portions, and friendly staff. I will definitely come back again!"
+    },
+    {
+        _id: "4",
+        name: "Amit Singh",
+        image: Testimonial4,
+        comment: "Loved the variety on the menu and the quick service. A must-visit place for food lovers."
+    },
 ]

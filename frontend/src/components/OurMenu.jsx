@@ -3,8 +3,9 @@ import {menu_list} from '../assets/assets.jsx'
 
 const OurMenu = ({category,setCategory}) => {
   return (
-    <div className='container our-menu'>
-        <h5 id='ourMenu'>Our Menu</h5>
+    <div className='container our-menu' id='ourMenu'>
+        <br /><br />
+        <h5>Our Menu</h5>
         <h2>Check our <span>Yummy Menu</span></h2>
         <div className='menu-list'>
             {

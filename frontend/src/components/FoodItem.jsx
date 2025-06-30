@@ -3,11 +3,11 @@ import { LuIndianRupee } from "react-icons/lu";
 import { assets } from '../assets/assets';
 import { StoreContext } from '../context/StoreContext';
 const FoodItem = ({id, name, image, price, description}) => {
-  const{cartItems,addToCart,removeFromCart}=useContext(StoreContext)
+  const{cartItems,addToCart,removeFromCart,url}=useContext(StoreContext)
   return (
     <div>
       <div className="card">
-        <img src={image} className="card-img-top"/>
+        <img src={url+"/uploads/"+image} className="card-img-top"/>
         <div className="card-body">
           <p className="card-text text-danger">{name}</p>
           <p className="card-text">{description}</p>
