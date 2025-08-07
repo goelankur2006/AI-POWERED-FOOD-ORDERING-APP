@@ -5,6 +5,8 @@ import connectDB from './config/mongodb.js'
 import foodRouter from './routes/foodRoutes.js'
 import userRouter from './routes/userRoute.js'
 import CartRouter from './routes/CartRoute.js'
+import orderRouter from './routes/OrderRoute.js'
+import contactRoute from './routes/contactRoute.js'
 
 const app = express()
 app.use(express.json())
@@ -18,7 +20,8 @@ app.use('/api/food',foodRouter)
 app.use('/uploads', express.static('uploads')); 
 app.use('/api/user',userRouter)
 app.use('/api/cart', CartRouter)
-
+app.use('/api/order',orderRouter)
+app.use('/api/contact',contactRoute)
 
 const port = process.env.PORT || 5000
 

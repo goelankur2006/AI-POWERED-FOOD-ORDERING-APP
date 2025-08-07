@@ -45,6 +45,9 @@ const Navbar = ({setShowLogin}) => {
                 <li className="nav-item">
                 <HashLink className="nav-link active" aria-current="page" to="#testimonials">Testimonials</HashLink>
                 </li>
+                <li className="nav-item">
+                <HashLink className="nav-link active" aria-current="page" to="/ContactUs">Contact Us</HashLink>
+                </li>
             </ul>
             <div className='cart-icon'>
                 <GrCart onClick= {()=>navigate('cart')} className='cart-icon'/>&nbsp;

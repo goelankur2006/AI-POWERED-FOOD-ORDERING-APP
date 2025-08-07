@@ -7,6 +7,7 @@ import Order from './pages/Order';
 import Login from './components/login/login';
 
 import { useState } from 'react';
+import ContactUs from './pages/ContactUs';
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -19,11 +20,14 @@ const App = () => {
     <div>
       <Navbar setShowLogin={setShowLogin}/>
       {showLogin && <Login setShowLogin={setShowLogin} />}
+      <div style={{ paddingTop: '64px' }}>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/cart/order' element={<Order/>}/>
+        <Route path='/contactUs' element={<ContactUs/>}/>
       </Routes>
+      </div>
     </div>
   )
 }
